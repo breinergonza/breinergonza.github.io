@@ -1,13 +1,4 @@
-/* -------------------------------------------
 
-Name: 		Arter
-Version:  1.0
-Author:		Nazar Miller (millerDigitalDesign)
-Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
-
-p.s. I am available for Freelance hire (UI design, web development). mail: miller.themes@gmail.com
-
-------------------------------------------- */
 $(function() {
 
   "use strict";
@@ -33,6 +24,22 @@ $(function() {
     continuousScrolling: true,
   });
 
+
+  function getEdad() {
+    var dateString = "1986/12/14 11:30:00";
+    let hoy = new Date()
+    let fechaNacimiento = new Date(dateString)
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear()
+    let diferenciaMeses = hoy.getMonth() - fechaNacimiento.getMonth()
+    if (
+      diferenciaMeses < 0 ||
+      (diferenciaMeses === 0 && hoy.getDate() < fechaNacimiento.getDate())
+    ) {
+      edad--
+    }
+    return edad
+  }
+
   // page loading
   $(document).ready(function() {
     anime({
@@ -55,6 +62,8 @@ $(function() {
         $('.art-preloader').css('display', 'none');
       }
     });
+
+    $("#lbledad").text(getEdad());
   });
 
   var bar = new ProgressBar.Line(preloader, {
