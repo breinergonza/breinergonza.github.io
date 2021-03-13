@@ -1577,7 +1577,7 @@ content
 .art-banner .art-banner-overlay .art-banner-photo {
   width: 390px;
   position: absolute;
-  right: 30px;
+  right: -70px;
   bottom: 0;
 }
 
@@ -2808,5 +2808,3 @@ html.is-animating .fade-left {
             transform: scale(1);
   }
 }
-
-/*# sourceMappingURL=style.css.map */
