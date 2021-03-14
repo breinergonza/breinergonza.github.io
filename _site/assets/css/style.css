@@ -77,7 +77,7 @@ $main-color: #64B5F6;
 */
 /* ------------------------------
 
-common
+Breitner Enrique González
 
 ------------------------------ */
 /* ----- fonts ----- */
@@ -1490,11 +1490,7 @@ menu bar
   opacity: 0;
 }
 
-/* ------------------------------
 
-content
-
------------------------------- */
 /* ----- section title ----- */
 .art-section-title {
   display: -webkit-box;
@@ -2681,11 +2677,7 @@ content (after 500px)
     width: 100%;
   }
 }
-/* ------------------------------
 
-burger button
-
------------------------------- */
 .art-menu-bar-btn {
   margin-top: -10px;
   display: inline-block;
@@ -2734,11 +2726,7 @@ burger button
   background: #fafafc;
 }
 
-/* ------------------------------
 
-transitions
-
------------------------------- */
 .art-a {
   -webkit-transition: 0.55s ease-in-out;
   transition: 0.55s ease-in-out;
