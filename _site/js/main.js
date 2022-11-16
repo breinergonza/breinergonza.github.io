@@ -40,6 +40,12 @@ $(function() {
     return edad
   }
 
+  function getAnioActual(){
+    var today = new Date();
+    var year = today.getFullYear();
+    return year
+  }
+
   // page loading
   $(document).ready(function() {
     anime({
@@ -64,6 +70,7 @@ $(function() {
     });
 
     $("#lbledad").text(getEdad());
+    $("#lblanio").text(getAnioActual());
   });
 
   var bar = new ProgressBar.Line(preloader, {
