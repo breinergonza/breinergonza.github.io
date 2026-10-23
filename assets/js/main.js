@@ -40,9 +40,11 @@
     }
   }
 
-  // Aparición progresiva de secciones
+  // Aparición progresiva de secciones. El contenido solo se oculta cuando este
+  // script está activo; si no carga o falla, todo permanece visible.
   var items = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !reduceMotion) {
+    root.classList.add("reveal-ready");
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
