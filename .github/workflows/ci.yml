@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build
+        run: bundle exec jekyll build --strict_front_matter
+        env:
+          JEKYLL_ENV: production
+
+      - name: Validar HTML y enlaces internos
+        run: >-
+          bundle exec htmlproofer ./_site
+          --disable-external
+          --ignore-urls "/^mailto:/"
+
+      - name: Buscar datos sensibles en el sitio generado
+        run: |
+          if grep -rEn '(\+57|\b3[0-9]{2}[ ]?[0-9]{3}[ ]?[0-9]{4}\b|C\.?C\.? ?[0-9]{6,})' _site --include='*.html'; then
+            echo "Se encontraron posibles teléfonos o documentos de identidad en el sitio." >&2
+            exit 1
+          fi
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

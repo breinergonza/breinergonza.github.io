@@ -1,0 +1,22 @@
+# Salida de Jekyll y cachés
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependencias
+.bundle/
+vendor/
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secretos
+.env
+.env.*
+
+# Configuración local del editor/agente
+.claude/

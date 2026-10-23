@@ -1,0 +1,210 @@
+# Contenido del perfil. Edita aquí; el HTML se genera a partir de estos datos.
+# Este sitio es público: no incluir teléfono, dirección, fecha de nacimiento ni documentos de identidad.
+
+name: Breitner Enrique González Angarita
+short_name: Breitner González
+role: Head of Architecture & Development
+company: IFX Networks
+location: Bogotá, Colombia
+tagline: Arquitectura de software · Cloud nativo · DevSecOps · IA en producción
+rotating:
+  - arquitecturas cloud nativas y multi-cloud.
+  - productos con IA generativa, RAG y agentes.
+  - plataformas DevSecOps de punta a punta.
+  - fábricas de software que escalan.
+
+summary: >-
+  Soy arquitecto de software y líder de tecnología con más de 15 años de experiencia diseñando y llevando a
+  producción soluciones empresariales de alto impacto. Actualmente lidero la fábrica de software (DevCenter) de
+  IFX Networks, donde defino la arquitectura, los estándares técnicos y la hoja de ruta tecnológica de los equipos
+  de desarrollo y automatización. Me especializo en arquitecturas cloud nativas y multi-cloud y en proyectos basados
+  en inteligencia artificial (IA generativa, RAG y agentes), con prácticas DevSecOps que aseguran sistemas
+  escalables y seguros.
+
+stats:
+  - value: "15+"
+    label: años en tecnología
+  - value: "7+"
+    label: años liderando arquitectura y equipos
+  - value: "3"
+    label: nubes públicas en producción
+  - value: "MSc"
+    label: en curso en Inteligencia Artificial
+
+links:
+  email: breinergonza@hotmail.com
+  linkedin: https://www.linkedin.com/in/breitner-enrique-gonzalez-angarita
+  github: https://github.com/breinergonza
+  web: https://breinergonza.net
+  cv_es: /assets/docs/Breitner-Gonzalez-CV-ES.pdf
+  cv_en: /assets/docs/Breitner-Gonzalez-CV-EN.pdf
+
+expertise:
+  - IA generativa, RAG y agentes
+  - Platform Engineering
+  - Kubernetes y cloud nativo
+  - Multi-cloud e infraestructura como código
+  - DevSecOps
+  - APIs, integración y eventos
+  - Arquitectura evolutiva y DDD
+  - Gobierno de ingeniería
+
+stack:
+  - area: Inteligencia artificial
+    icon: ai
+    items: [IA generativa, RAG, Agentes, LLMOps, Python, Redes neuronales convolucionales, Jupyter]
+  - area: Cloud e infraestructura
+    icon: cloud
+    items: [Azure, AWS, GCP, Kubernetes, Docker, Terraform, Ansible, OpenFaaS, Serverless, VMware Tanzu]
+  - area: Arquitectura
+    icon: arch
+    items: [Microservicios, DDD, CQRS, Event-Driven, Clean Architecture, SOLID, SOA, ADRs]
+  - area: Backend
+    icon: code
+    items: [ASP.NET Core, Node.js, Python, Flask, Django, Java EE, REST, WCF]
+  - area: Frontend y móvil
+    icon: ui
+    items: [Angular, React, TypeScript, Vue.js, Ionic, Xamarin, Swift]
+  - area: Datos
+    icon: data
+    items: [SQL Server, PostgreSQL, Oracle, MySQL, MongoDB, Cosmos DB]
+  - area: DevSecOps e integración
+    icon: pipe
+    items: [Azure DevOps, GitHub Actions, Jenkins, SonarQube, Mulesoft, Apigee, Azure API Management, RabbitMQ, MQTT]
+  - area: Seguridad
+    icon: shield
+    items: [Kubernetes Security (CKS), PKI y firma digital, Shift-left security, Gestión de secretos]
+
+experience:
+  - role: Head of Architecture & Development
+    org: IFX Networks · Desarrollo de Productos Cloud
+    period: Mar 2022 — Presente
+    current: true
+    bullets:
+      - Lidero el DevCenter, la fábrica de software de la compañía, con dirección estratégica y gobierno de ingeniería para todos los equipos de desarrollo y automatización.
+      - Dirijo proyectos de última generación que incorporan IA generativa, RAG y agentes en productos y procesos.
+      - Diseño arquitecturas cloud empresariales alineadas con el negocio, con foco en escalabilidad, resiliencia y seguridad.
+      - Defino estándares de plataforma, herramientas y hojas de ruta tecnológicas para entornos multi-cloud e híbridos, e impulso la cultura DevSecOps.
+    tags: [IA generativa, Arquitectura empresarial, Multi-cloud, DevSecOps, Platform Engineering]
+  - role: Cloud Software Architect
+    org: IFX Networks · Managed Cloud
+    period: Oct 2021 — Mar 2022
+    bullets:
+      - Lideré el diseño técnico y funcional de la arquitectura de software del portafolio Managed Cloud.
+      - Establecí estándares de desarrollo y evalué plataformas frente a requisitos funcionales y de calidad.
+    tags: [Kubernetes, FaaS, VMware, AWS, Azure, GCP]
+  - role: Líder de Desarrollo Cloud · DevOps Team Leader
+    org: IFX Networks · Desarrollo Cloud
+    period: May 2019 — Sep 2021
+    bullets:
+      - Lideré el equipo de Desarrollo Cloud y fui coach de DevOps y DevSecOps a nivel compañía.
+      - Implementé pipelines CI/CD y automaticé el aprovisionamiento multi-cloud con infraestructura como código.
+      - Integré gestores de APIs y brokers de mensajería en la plataforma DevCloud.
+    tags: [Azure DevOps, Jenkins, Terraform, Ansible, Mulesoft, Apigee, RabbitMQ, MQTT]
+  - role: Desarrollador Full Stack .NET
+    org: Stefanini · Squad Digital
+    period: Ene 2019 — May 2019
+    bullets:
+      - Desarrollé microservicios y APIs REST bajo principios DDD en un programa de transformación digital sobre Azure.
+    tags: [ASP.NET Core, Service Fabric, API Management, Cosmos DB, Kubernetes]
+  - role: Líder Técnico .NET
+    org: DB-System · Ministerio de Hacienda y Crédito Público
+    period: Jun 2018 — Ene 2019
+    bullets:
+      - Lideré el equipo .NET del proyecto Cuentas Inactivas en la fábrica de software del Ministerio.
+    tags: [ASP.NET MVC, Azure DevOps/TFS, SQL Server, Oracle, WCF]
+  - role: Gestor técnico de innovación · Consultor I+D+i
+    org: DB-System
+    period: Ene 2016 — May 2018
+    bullets:
+      - Diseñé proyectos de innovación y prototipos funcionales, incluido DiBot, asistente virtual construido con Microsoft Bot Framework.
+      - Lideré equipos .NET en proyectos web y de georreferenciación.
+    tags: [Angular, MongoDB, Xamarin, ASP.NET Core, Bot Framework, ArcGIS]
+  - role: Coordinador de Desarrollo
+    org: Fénix Móviles
+    period: Jul 2014 — Dic 2015
+    bullets:
+      - Coordiné el equipo web y móvil para clientes del sector público como el Ministerio de Educación.
+    tags: [ASP.NET, SQL Server, Azure, Android, Swift, Xamarin]
+
+# Repositorios públicos destacados. Los proyectos empresariales son privados.
+projects:
+  - name: microproyecto-mri
+    title: Clasificación de tumores cerebrales en MRI
+    desc: Clasificación automática de tipos de tumor en imágenes de resonancia magnética con redes neuronales convolucionales.
+    lang: Jupyter Notebook
+    year: 2025
+    tags: [Deep Learning, CNN, Visión por computador]
+  - name: devops_taller_2
+    title: Microservicio con CI/CD en AWS
+    desc: Microservicio Flask con pruebas automatizadas, integración continua y despliegue continuo sobre AWS.
+    lang: Python
+    year: 2026
+    tags: [CI/CD, AWS, Flask, Testing]
+  - name: Serverless_Portal
+    title: Portal de funciones serverless
+    desc: Portal web para editar y gestionar el código fuente de funciones serverless.
+    lang: React
+    year: 2022
+    tags: [Serverless, FaaS, React]
+  - name: FeatureFlagsExamp
+    title: Feature Flags en Azure
+    desc: Activación progresiva de funcionalidades con Azure App Configuration y .NET 5.
+    lang: C#
+    year: 2021
+    tags: [.NET, Azure, Progressive delivery]
+  - name: SafeTemperatureProject
+    title: Comunicación IoT segura
+    desc: Firma digital entre una estación de monitoreo de temperatura en Raspberry Pi y una entidad certificadora.
+    lang: Python
+    year: 2020
+    tags: [IoT, PKI, Criptografía]
+  - name: BlockchainProject
+    title: Contratos inteligentes con React
+    desc: Aplicación React + Redux que interactúa con un contrato inteligente en Ethereum (Truffle y Ganache).
+    lang: JavaScript
+    year: 2020
+    tags: [Blockchain, Solidity, React]
+
+education:
+  - degree: Maestría en Inteligencia Artificial
+    school: Universidad de los Andes
+    year: En curso
+  - degree: Magíster en Ciencias de la Información y las Comunicaciones
+    school: Universidad Distrital Francisco José de Caldas
+    year: "2025"
+  - degree: Especialista en Ingeniería de Software
+    school: Universidad Distrital Francisco José de Caldas
+    year: "2020"
+  - degree: Ingeniero de Sistemas
+    school: Universidad Popular del Cesar
+    year: "2017"
+
+certs:
+  - Kubernetes Security Specialist (CKS) — Udemy
+  - Microservices Architecture — Udemy
+  - Serverless Framework Bootcamp — Udemy
+  - Scrum Fundamentals Certified (SFC) — SCRUMstudy
+  - Desarrollador Full Stack y Tecnologías Híbridas — Fedesoft
+  - Microsoft 20480 · 20483 · 20486
+  - Red Hat Delivery Specialist — Mobile Application Platform
+
+publication: Comportamiento del Sector de Tecnologías de la Información y Tendencias 2017 · ISBN 978-958-59813-0-0
+
+testimonials:
+  - name: Oscar R. Londoño L.
+    role: Arquitecto en Gestión Informática
+    photo: oscar.jpeg
+    quote: Profesional y muy responsable, juntos cumplimos con éxito nuestros objetivos en la organización donde tuve el gusto de conocerlo. Se destaca su conocimiento en arquitecturas cloud y buenas prácticas de desarrollo, siendo siempre un ingeniero con conocimiento en tecnologías que están a la vanguardia en el mercado.
+  - name: Luisa Fernanda Coronel C.
+    role: QA Senior · ISTQB · Scrum Master
+    photo: luisa.jpeg
+    quote: Breitner es una persona enfocada, se alinea con los objetivos del proyecto en curso y propone nuevas ideas, siempre con escucha generosa.
+  - name: Jose A. González Guevara
+    role: Software Development Sr Analyst
+    photo: jose.jpeg
+    quote: Tuve la oportunidad de trabajar con él, una persona comprometida e investigativa.
+  - name: Anny Arzuaga A.
+    role: B2B Sales & Partnerships
+    photo: anny.jpeg
+    quote: Breitner es una de las personas más comprometidas, trabajadoras y estudiosas que conozco, siempre enfrentando cada desafío profesional y personal con mucho optimismo y energía. Sin duda de los mejores compañeros de equipo que he tenido.
