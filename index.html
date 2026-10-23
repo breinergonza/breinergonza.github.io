@@ -1,12 +1,242 @@
 ---
 layout: default
-heading: Breitner Gonzalez
-subheading: Especialista en Ingeniería de Software
 ---
+{%- assign p = site.data.profile -%}
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#top" aria-label="Inicio">
+      <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="28" height="28">
+      <span>breinergonza<span class="muted">.github.io</span></span>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#perfil">Perfil</a>
+      <a href="#stack">Stack</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#formacion">Formación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Cambiar tema claro u oscuro">
+      <span class="theme-toggle__sun">{% include icon.html name="sun" %}</span>
+      <span class="theme-toggle__moon">{% include icon.html name="moon" %}</span>
+    </button>
+  </div>
+</header>
 
-{% include header.html %}
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <p class="prompt"><span class="prompt__user">breitner@bogota</span>:<span class="prompt__path">~</span>$ whoami</p>
+        <h1>{{ p.short_name }}</h1>
+        <p class="hero__role">{{ p.role }} <span class="muted">@</span> {{ p.company }}</p>
+        <p class="hero__rotate" aria-live="polite">
+          Diseño y llevo a producción
+          <span class="rotate" data-words='{{ p.rotating | jsonify | escape }}'>{{ p.rotating | first }}</span>
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="{{ p.links.cv_es | relative_url }}" download>{% include icon.html name="download" %} CV (ES)</a>
+          <a class="btn" href="{{ p.links.cv_en | relative_url }}" download>{% include icon.html name="download" %} CV (EN)</a>
+          <a class="btn btn--ghost" href="{{ p.links.web }}" rel="noopener" target="_blank">{% include icon.html name="globe" %} breinergonza.net</a>
+        </div>
+        <p class="hero__loc muted">{% include icon.html name="pin" %} {{ p.location }}</p>
+      </div>
 
-<div class="container">
-  {% include features.html %}
-  {% include footer.html %}
-</div>
+      <div class="hero__card" aria-hidden="true">
+        <div class="window">
+          <div class="window__bar"><i></i><i></i><i></i><span>profile.json</span></div>
+<pre class="code"><code>{
+  <span class="k">"name"</span>: <span class="s">"{{ p.short_name }}"</span>,
+  <span class="k">"role"</span>: <span class="s">"{{ p.role }}"</span>,
+  <span class="k">"leads"</span>: <span class="s">"DevCenter · software factory"</span>,
+  <span class="k">"focus"</span>: [
+    <span class="s">"AI-native systems"</span>,
+    <span class="s">"cloud-native architecture"</span>,
+    <span class="s">"platform engineering"</span>,
+    <span class="s">"DevSecOps"</span>
+  ],
+  <span class="k">"clouds"</span>: [<span class="s">"Azure"</span>, <span class="s">"AWS"</span>, <span class="s">"GCP"</span>],
+  <span class="k">"learning"</span>: <span class="s">"MSc in AI · Uniandes"</span>,
+  <span class="k">"openToTalk"</span>: <span class="b">true</span>
+}</code></pre>
+        </div>
+        <picture class="hero__photo">
+          <source srcset="{{ '/assets/img/breitner-gonzalez.webp' | relative_url }}" type="image/webp">
+          <img src="{{ '/assets/img/breitner-gonzalez.jpg' | relative_url }}" alt="Foto de {{ p.name }}" width="160" height="160">
+        </picture>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <dl class="stats">
+        {%- for s in p.stats %}
+        <div class="stat reveal"><dt>{{ s.value }}</dt><dd>{{ s.label }}</dd></div>
+        {%- endfor %}
+      </dl>
+    </div>
+  </section>
+
+  <!-- Perfil -->
+  <section class="section" id="perfil">
+    <div class="wrap">
+      <h2 class="section__title"><span class="section__num">01</span> Perfil</h2>
+      <div class="profile reveal">
+        <p class="lead">{{ p.summary }}</p>
+        <ul class="chips" aria-label="Áreas de experiencia">
+          {%- for e in p.expertise %}
+          <li>{{ e }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <h2 class="section__title"><span class="section__num">02</span> Stack técnico</h2>
+      <p class="section__intro muted">Tecnologías que he usado en producción, agrupadas por dominio.</p>
+      <div class="stack">
+        {%- for g in p.stack %}
+        <article class="card stack__card reveal">
+          <h3>{% include icon.html name=g.icon %} {{ g.area }}</h3>
+          <ul class="tags">
+            {%- for t in g.items %}
+            <li>{{ t }}</li>
+            {%- endfor %}
+          </ul>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia -->
+  <section class="section" id="experiencia">
+    <div class="wrap">
+      <h2 class="section__title"><span class="section__num">03</span> Experiencia</h2>
+      <ol class="timeline">
+        {%- for x in p.experience %}
+        <li class="timeline__item reveal{% if x.current %} is-current{% endif %}">
+          <div class="timeline__head">
+            <h3>{{ x.role }}</h3>
+            <span class="timeline__period">{{ x.period }}</span>
+          </div>
+          <p class="timeline__org">{{ x.org }}</p>
+          <ul class="timeline__bullets">
+            {%- for b in x.bullets %}
+            <li>{{ b }}</li>
+            {%- endfor %}
+          </ul>
+          <ul class="tags tags--sm">
+            {%- for t in x.tags %}
+            <li>{{ t }}</li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section class="section" id="proyectos">
+    <div class="wrap">
+      <h2 class="section__title"><span class="section__num">04</span> Código abierto y laboratorios</h2>
+      <p class="section__intro muted">Los proyectos empresariales que lidero son privados. Estos son repositorios públicos de investigación, maestría y experimentación.</p>
+      <div class="projects">
+        {%- for r in p.projects %}
+        <a class="card project reveal" href="{{ p.links.github }}/{{ r.name }}" target="_blank" rel="noopener">
+          <div class="project__top">
+            <span class="project__repo">{% include icon.html name="github" %} {{ r.name }}</span>
+            <span class="project__arrow">{% include icon.html name="arrow" %}</span>
+          </div>
+          <h3>{{ r.title }}</h3>
+          <p>{{ r.desc }}</p>
+          <div class="project__meta">
+            <span class="lang" data-lang="{{ r.lang }}">{{ r.lang }}</span>
+            <span class="muted">{{ r.year }}</span>
+          </div>
+          <ul class="tags tags--sm">
+            {%- for t in r.tags %}
+            <li>{{ t }}</li>
+            {%- endfor %}
+          </ul>
+        </a>
+        {%- endfor %}
+      </div>
+      <p class="more"><a class="link" href="{{ p.links.github }}?tab=repositories" target="_blank" rel="noopener">Ver todos los repositorios {% include icon.html name="arrow" %}</a></p>
+    </div>
+  </section>
+
+  <!-- Formación -->
+  <section class="section" id="formacion">
+    <div class="wrap">
+      <h2 class="section__title"><span class="section__num">05</span> Formación y certificaciones</h2>
+      <div class="edu">
+        <div class="card reveal">
+          <h3>{% include icon.html name="cap" %} Formación académica</h3>
+          <ul class="edu__list">
+            {%- for e in p.education %}
+            <li>
+              <strong>{{ e.degree }}</strong>
+              <span class="muted">{{ e.school }}</span>
+              <span class="edu__year">{{ e.year }}</span>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>{% include icon.html name="badge" %} Certificaciones y cursos</h3>
+          <ul class="edu__certs">
+            {%- for c in p.certs %}
+            <li>{{ c }}</li>
+            {%- endfor %}
+          </ul>
+          <p class="edu__pub"><span class="muted">Publicación ·</span> {{ p.publication }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recomendaciones -->
+  <section class="section" id="recomendaciones">
+    <div class="wrap">
+      <h2 class="section__title"><span class="section__num">06</span> Recomendaciones</h2>
+      <div class="quotes">
+        {%- for t in p.testimonials %}
+        <figure class="card quote reveal">
+          <blockquote>{{ t.quote }}</blockquote>
+          <figcaption>
+            <img src="{{ '/assets/img/testimonials/' | append: t.photo | relative_url }}" alt="" width="40" height="40" loading="lazy">
+            <span><strong>{{ t.name }}</strong><span class="muted">{{ t.role }}</span></span>
+          </figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section contact" id="contacto">
+    <div class="wrap">
+      <div class="contact__box reveal">
+        <h2>¿Hablamos de arquitectura, plataformas o IA?</h2>
+        <p class="muted">La forma más rápida de contactarme es por LinkedIn o correo.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="{{ p.links.linkedin }}" target="_blank" rel="noopener">{% include icon.html name="linkedin" %} LinkedIn</a>
+          <a class="btn" href="mailto:{{ p.links.email }}">{% include icon.html name="mail" %} {{ p.links.email }}</a>
+          <a class="btn btn--ghost" href="{{ p.links.github }}" target="_blank" rel="noopener">{% include icon.html name="github" %} GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <span>© <span class="js-year">{{ site.time | date: "%Y" }}</span> {{ p.name }}</span>
+    <span class="muted mono">Jekyll · GitHub Pages · sin trackers</span>
+  </div>
+</footer>

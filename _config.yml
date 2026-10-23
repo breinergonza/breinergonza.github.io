@@ -1,15 +1,33 @@
-title: Breitner Gonzalez Angarita 
-description: Portafolio de Breitner Gonzalez Angarita
-sitename: Breitner Gonzalez
-baseurl: ''
-sass:
-  sass_dir: /assets/_sass
-  style: :compressed
-collections:
-  - features
+title: Breitner González · Head of Architecture & Development
+description: >-
+  Arquitecto de software y líder de tecnología con más de 15 años de experiencia. Head of Architecture &
+  Development en IFX Networks: arquitectura cloud nativa, multi-cloud, DevSecOps e IA generativa en producción.
+url: https://breinergonza.github.io
+baseurl: ""
+lang: es_CO
+locale: es_CO
+author: Breitner Enrique González Angarita
+image: /assets/img/og.jpg
+logo: /assets/img/logo.svg
+twitter:
+  username: breinergonza
+social:
+  name: Breitner Enrique González Angarita
+  links:
+    - https://www.linkedin.com/in/breitner-enrique-gonzalez-angarita
+    - https://github.com/breinergonza
+    - https://breinergonza.net
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - LICENSE.txt
-  - CNAME
+  - LICENSE
+  - vendor
+  - .bundle
+  - .github
+  - .jekyll-cache
